@@ -70,26 +70,6 @@
     .whatsapp { background-color: #25D366; }
     .github { background-color: #333333; }
 
-    .qr-section {
-      display: none;
-      margin-top: 40px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    .qr-section h2 {
-      font-size: 1.5rem;
-      color: #111827;
-      margin-bottom: 20px;
-    }
-
-    .qr {
-      width: 100%;
-      max-width: 250px;
-      margin: 0 auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -125,14 +105,9 @@
     <i class="fas fa-envelope"></i> Email Me
   </a>
 
-  <a class="btn pay" onclick="document.getElementById('qr').style.display='block'; window.scrollTo(0, document.body.scrollHeight);">
-    <i class="fas fa-qrcode"></i> Pay Me (UPI QR)
+  <a class="btn pay" href="upi://pay?pa=9304143918@ybl&pn=Pradeep%20Kumar&cu=INR">
+    <i class="fas fa-money-bill-wave"></i> Pay Now via UPI
   </a>
-
-  <div class="qr-section" id="qr">
-    <h2>📲 Scan to Pay</h2>
-    <img class="qr" src="qr.png" alt="UPI QR Code">
-  </div>
 
 </body>
 </html>
