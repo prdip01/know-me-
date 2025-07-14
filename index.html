@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pradeep's Contact Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9a8d4, #fcd34d);
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1f2937;
+      margin: 20px 0;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 10px auto 25px;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #2563eb;
+      padding: 15px;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 350px;
+      border-radius: 12px;
+      font-size: 18px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn i {
+      font-size: 22px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .call { background-color: #10b981; }
+    .linkedin { background-color: #0077b5; }
+    .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .email { background-color: #f59e0b; }
+    .pay { background-color: #8b5cf6; }
+    .whatsapp { background-color: #25D366; }
+    .github { background-color: #333333; }
+
+    .qr-section {
+      display: none;
+      margin-top: 40px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .qr-section h2 {
+      font-size: 1.5rem;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .qr {
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="IMG_6401.jpeg" alt="Profile" class="profile-pic">
+  <h1>🚀 Connect with Pradeep</h1>
+
+  <a class="btn call" href="tel:+919304143918">
+    <i class="fas fa-phone"></i> Call Me
+  </a>
+
+  <a class="btn whatsapp" href="https://wa.me/919304143918" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+
+  <a class="btn linkedin" href="https://www.linkedin.com/in/pradeep-kumar-53a9502a6" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+
+  <a class="btn instagram" href="https://www.instagram.com/prdip01" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a class="btn github" href="https://github.com/prdip01" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+
+  <a class="btn email" href="mailto:iamprdip160@gmail.com">
+    <i class="fas fa-envelope"></i> Email Me
+  </a>
+
+  <a class="btn pay" onclick="document.getElementById('qr').style.display='block'; window.scrollTo(0, document.body.scrollHeight);">
+    <i class="fas fa-qrcode"></i> Pay Me (UPI QR)
+  </a>
+
+  <div class="qr-section" id="qr">
+    <h2>📲 Scan to Pay</h2>
+    <img class="qr" src="qr.png" alt="UPI QR Code">
+  </div>
+
+</body>
+</html>
